@@ -1,0 +1,160 @@
+@import "../abstracts/variables.scss";
+
+/*business_container*/
+.business_container{
+    margin:5rem;
+    //background-color:$primary-color-dark;   
+}
+.business_headtitle{
+    color:$primary-color-dark;
+    text-align: center;
+    padding-top:3rem;
+    margin-bottom:5rem;
+    font-weight:bold;
+    font-size:6rem;
+}
+.business_title{
+    color:$primary-color-dark;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top:2rem;
+    margin-bottom:50px;
+    font-weight:bold;
+    font-size:2.5rem;
+    margin-left:25rem;
+}
+
+.business_footage{
+    display:flex;
+    justify-items: center;
+    align-items: center;
+    height:700px;
+    //background-image:url('/business.png'); 
+    background-size: cover;
+    margin-top:50px;
+    margin:0 auto;
+    filter: drop-shadow(15px 15px 30px rgba(0, 0, 0, 0.25));
+    border-radius: 30px;
+    margin-top:50px;
+}
+.business_button>button{
+    margin-top:600px;
+    margin-right:2%;
+    border:none;
+    float:right;
+    border-radius: 5px;
+    font-weight:bold;
+    padding:1%;
+}
+.application{
+    margin:0 auto;
+    margin-top: 7rem;
+    height:800px;
+    background: $primary-color-light;
+    padding:5rem;
+    border-radius: 30px; 
+    color:white;
+}
+.input_form{
+    margin:0 auto;   
+}
+.input_col{
+    float:left;
+    
+}
+.input_col>p{
+    clear:both;
+    margin-top:10px;
+    padding-left:3%;
+    font-size:15px;
+}
+.input_col>input{
+    clear:both;
+    margin-top:10px;
+}
+.business_input{
+    height: 40px;
+    background-color: #EBEBEB;
+    border: none;
+    width: 100%;	
+    border-radius: 5px;
+    padding: 0.2rem;
+    font-size:1.5rem;
+
+}
+.business_textarea{
+    resize: none;
+    background-color: #EBEBEB;
+    border: none;
+    width: 100%;	
+    border-radius: 5px;
+    padding: 1%;
+}
+.commentary{
+    padding-left:5rem;
+    font-weight: bold;
+    display:inline;
+    font-size:1.5rem;
+}
+.business_input_file{
+    padding-top:4rem;
+}
+.input{
+margin-left: 15%;
+margin-top: 0px;
+}
+.label{
+font-weight: bold;
+display:inline;
+float:left;
+margin-right:3%;
+margin-top:3%;
+margin-left:4rem;
+
+}
+.input_row{
+    clear:both;
+    padding-top:30px;
+}
+.input_row>p{
+    float:left;
+    font-weight: bold;
+    display:inline-block;
+}
+.input_row>input{
+    float:left;
+    height:150px;
+}
+.checkbox_container>input{
+    width:4%;
+    margin-top:10px;
+    float:left;
+}
+.checkbox_text{
+    float:left;
+    margin-top:15px;
+    margin-left:1%;  
+    font-size:1.5rem;
+}
+.application_button{
+    float:right;
+    background-color:$primary-color-dark;
+    color:white;
+    height:50px;
+    font-weight:bold;
+    margin-right:1%;
+    border:0;
+    border-radius:5px;
+}
+#thanks_message{
+    display:none;
+    color:$primary-color-dark;
+  }
+  #submit_application{
+    color:white;
+    margin-top:13rem;
+    font-size:2rem;
+  }
+
+/*end of footer style*/

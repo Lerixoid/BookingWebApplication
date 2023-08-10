@@ -1,0 +1,168 @@
+@import "../abstracts/variables.scss";
+
+.filter {
+  margin-left: 2.4rem;
+  padding: 1.2rem;
+  border-radius: 12px;
+  min-width: 150px;
+  background-color: $primary-color-lighter;
+
+  &__category {
+    border-bottom: 1px solid rgba($color-black, 0.1);
+    margin-bottom: 3rem;
+  }
+  &__category_price{
+    border-bottom: 1px solid rgba($color-black, 0.1);
+    margin-bottom: 3rem;
+  }
+  &__category_rating{
+    border-bottom: 1px solid rgba($color-black, 0.1);
+    margin-bottom: 3rem;
+  }
+  &__category-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $primary-color-dark;
+    margin-bottom: 1.2rem;
+  }
+
+  &__input-container {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 2.4rem;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 700;
+    color: $primary-color-dark;
+    margin-bottom: 2.4rem;
+  }
+
+  &__label {
+    font-size: 1.6rem;
+    margin-left: 4rem;
+  }
+
+  &__input {
+    font: inherit;
+    padding: 0.6rem 1.2rem;
+    font-size: 1.6rem;
+    border-radius: 12px;
+    border: 2px solid $primary-color-light;
+    transition: $transition-normal;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+      border: 2px solid $secondary-color;
+    }
+  }
+
+  &__dash {
+    color: $primary-color;
+    font-size: 1.2em;
+  }
+}
+
+.checkbox {
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  &__input {
+    display: block;
+    opacity: 1;
+    cursor: pointer;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  &__label {
+    font-size: 1.6rem;
+    color: $primary-color-dark;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width:1440px) {
+.filter{
+  width:15%;
+}
+}
+@media only screen and (min-width: 768px) and (max-width:900px) {
+  .filter {
+    margin-left:2.5rem;
+    margin-right:2.5rem;
+    &__category_price{
+        display: flex;
+        flex-direction: row;
+        gap:2rem;
+    }
+    &__category_rating{
+      display: flex;
+      flex-direction: row;
+      gap:2rem;
+  }
+  }
+}
+@media only screen and (max-width: 768px) and (min-width:480px) {
+  .filter {
+    margin-left:2.5rem;
+    margin-right:2.5rem;
+    &__category_price{
+        display: flex;
+        flex-direction: row;
+        gap:2rem;
+    }
+    &__category_rating{
+      display: flex;
+      flex-direction: row;
+      gap:2rem;
+  }
+  }
+}
+@media only screen and (min-width: 900px) and (max-width:1200px) {
+  .filter {
+    margin-left:4rem;
+    margin-right:4rem;
+   &__title{
+    margin-bottom:0;
+   }
+    &__category_price{
+        display: flex;
+        flex-direction: row;
+        gap:2rem;
+    }
+    &__category_rating{
+      display: flex;
+      flex-direction: row;
+      gap:2rem;
+  }
+  }
+}
+
+@media only screen  and (max-width: 480px) and (orientation:portrait) {
+  .filter {
+    margin-left:1rem;
+    margin-right:1rem;
+    &__category_price{
+        display: flex;
+        flex-direction: row;
+        gap:0.5rem;
+        
+    }
+    .checkbox{
+      &__label{
+        font-size:1rem; 
+      }
+      
+    }
+    &__category_rating{
+      display: flex;
+      flex-direction: row;
+      gap:0.5rem;
+  }
+  }
+}

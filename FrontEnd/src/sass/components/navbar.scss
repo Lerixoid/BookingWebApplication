@@ -1,0 +1,256 @@
+@import "../abstracts/variables.scss";
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 600;
+  font-size: $font-size-medium;
+  border-bottom: 1px solid rgba($color-black, 0.1);
+
+  &__logo {
+    width: 12rem;
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    gap: 6.4rem;
+    align-items: center;
+    line-height: 1.4;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+  }
+
+  &__item {
+    text-decoration: none;
+    transition: $transition-normal;
+
+    &:link,
+    &:visited {
+      color: $color-grey-dark-3;
+      border-top: 1px solid rgba($primary-color-dark, 0);
+    }
+
+    &:hover,
+    &:active {
+      color: $primary-color-dark;
+      padding-bottom: 1rem;
+    }
+
+    &.nav__button-login:link,
+    &.nav__button-login:visited {
+      padding: 0.8rem 2.4rem;
+      border: 2px solid $primary-color;
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 12px;
+      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+      color: $primary-color;
+    }
+
+    &.nav__button-login:hover {
+      border: 2px solid $primary-color-dark;
+      box-shadow: 0 1rem 1rem rgba($color-black, 0.2);
+      color: $primary-color-dark;
+    }
+
+    &.nav__button-login:active {
+      box-shadow: 0 0.6rem 1rem rgba($color-black, 0.2);
+    }
+
+    &.nav__button:link,
+    &.nav__button:visited {
+      background-color: $primary-color;
+      padding: 0.8rem 2.4rem;
+      border-top-right-radius: 12px;
+      border-bottom-right-radius: 12px;
+      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+      border: 2px solid $primary-color;
+      color: $color-white;
+    }
+
+    &.nav__button:hover {
+      background-color: $primary-color-dark;
+      box-shadow: 0 1rem 1rem rgba($color-black, 0.2);
+      border: 2px solid $primary-color-dark;
+    }
+
+    &.nav__button:active {
+      box-shadow: 0 0.6rem 1rem rgba($color-black, 0.2);
+      border: 2px solid $primary-color-dark;
+    }
+  }
+
+  &__profile {
+    .nav__icon {
+      font-size: 4rem;
+      color: $primary-color;
+      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+      padding: 0.6rem;
+      border-radius: 100px;
+      transition: $transition-normal;
+
+      &:hover {
+        color: $secondary-color-dark;
+        transform: translateY(-0.5rem);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+      }
+    }
+  }
+}
+.mob-nav {
+  display: none;
+}
+@media only screen and (min-width: 900px) and (max-width: 1440px) {
+  .nav {
+    justify-content: space-evenly;
+    font-size: 1.4rem;
+
+    &__list {
+      gap: 2.5rem;
+    }
+  }
+  .mob-nav {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 900px) {
+  .nav {
+    justify-content: space-evenly;
+    font-size: 1.4rem;
+
+    &__list {
+      gap: 2.5rem;
+    }
+  }
+  .mob-nav {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 480px) {
+  .nav {
+    justify-content: space-evenly;
+    font-size: 1.2rem;
+
+    &__list {
+      gap: 1.5rem;
+    }
+
+    &__item {
+      &.nav__button-login:link,
+      &.nav__button-login:visited {
+        padding: 1rem;
+      }
+      &.nav__button:link,
+      &.nav__button:visited {
+        padding: 1rem;
+      }
+    }
+  }
+  .mob-nav {
+    display: none;
+  }
+}
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+  .nav {
+    row-gap: 0rem;
+    font-size: 1.4rem;
+    justify-content: space-between;
+    #nav__list {
+      flex-direction: column;
+      position: absolute;
+      width: 15rem;
+      z-index: 1;
+      gap: 0rem;
+      margin-left: 18rem;
+      margin-top: 37rem;
+      background-color: white;
+      //border:1px solid blue;
+    }
+    &__buttons {
+      background-color: none;
+      border-radius: none;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    &__item {
+      display: flex;
+      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.05);
+      width: 15rem;
+      height: 5rem;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        background-color: $primary-color-lighter;
+      }
+
+      &.nav__button-login:link,
+      &.nav__button-login:visited {
+        border: none;
+        border-radius: 2rem;
+        color: $primary-color-dark;
+        background-color: $primary-color-lighter;
+        border-radius: none;
+        width: 100%;
+        box-shadow: none;
+      }
+
+      &.nav__button-login:hover {
+        border: none;
+        border-radius: none;
+        background-color: none;
+      }
+
+      &.nav__button-login:active {
+        background-color: none;
+        border-radius: none;
+        border: none;
+      }
+
+      &.nav__button:link,
+      &.nav__button:visited {
+        border-radius: 2rem;
+        border: none;
+        background-color: $primary-color-dark;
+        box-shadow: none;
+        background-color: none;
+        width: 100%;
+      }
+
+      &.nav__button:hover {
+        border: none;
+        border-radius: none;
+        background-color: none;
+      }
+
+      &.nav__button:active {
+        border: none;
+        border-radius: none;
+        background-color: none;
+      }
+    }
+
+    &__logo {
+      width: 10rem;
+      margin-left: 40%;
+      padding-top: 1rem;
+    }
+
+    &__list {
+      display: none;
+    }
+    .mob-nav {
+      display: block;
+      font-size: 5rem;
+      margin-right: 10%;
+    }
+  }
+}

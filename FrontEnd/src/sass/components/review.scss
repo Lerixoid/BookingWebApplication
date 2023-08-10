@@ -1,0 +1,129 @@
+@import "../abstracts/variables.scss";
+
+.reviews {
+  display:flex;
+  width:100%;
+  flex-direction: column;
+  padding-left:6rem;
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 2.4rem;
+    margin-left:2rem;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-left:2rem;
+    flex:3 1 1;
+
+    
+  }
+}
+.review{
+  display:flex;
+  flex-direction: row;
+}
+  .profile {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    
+
+    &__icon {
+      color: $primary-color-dark;
+      font-size: 6.4rem;
+    }
+
+    &__name {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: $color-grey-dark-2;
+    }
+  }
+    .comment {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      width:70%;
+      margin-left:8rem;
+
+      &__text {
+        font-size: 1.6rem;
+      }
+
+      &__date {
+        font-size: 1.4rem;
+        color: $color-grey-dark;
+      }
+    }
+    .rate {
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+      margin-left:12rem;
+
+      &__icon {
+        color: $secondary-color-dark;
+        font-size: 3.2rem;
+      }
+
+      &__value {
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: $secondary-color-dark;
+      }
+    }
+
+@media only screen and (max-width: 768px) and (min-width:480px) {
+
+
+  .reviews{
+    padding-right:10rem;
+  }
+.review{
+  .comment{
+    margin-left:3rem;
+    width:100%;
+    text-align:justify;
+  }
+  .rate{
+    gap:0rem;
+    margin-left:2rem;
+    align-items: flex-start;
+  }
+}
+    }
+
+    @media only screen and (max-width: 480px) and (orientation:portrait) {
+
+
+      .reviews{
+        padding-left:2rem;
+        padding-right:4rem;
+      }
+    .review{
+      .comment{
+        margin-left:3rem;
+        width:100%;
+        text-align:left;
+        
+
+        &__text{
+          font-size:1rem;
+        }
+      }
+      .rate{
+        gap:0rem;
+        margin-left:2rem;
+        align-items: flex-start;
+      }
+    }
+        }
+  
+

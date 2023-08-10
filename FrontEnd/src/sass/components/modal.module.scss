@@ -1,0 +1,405 @@
+@import "../abstracts/variables.scss";
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+
+  .modal_container {
+    position: absolute;
+    //top: 50%;
+    left: 25%;
+    //transform: translate(-50%, -50%);
+    overflow-y: initial !important;
+    display: flex;
+    gap: 2.4rem;
+
+    .modal {
+      background-color: white;
+      box-shadow: 0 1rem 3rem rgba($color-black, 0.5);
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem;
+      height: 100vh;
+      overflow-y: auto;
+
+      &__button_close {
+        cursor: pointer;
+        border: none;
+        background-color: white;
+        align-self: flex-end;
+        transition: $transition-normal;
+
+        &:hover {
+          color: $primary-color;
+          transform: scale(1.2);
+        }
+
+        &:active {
+          color: $primary-color-dark;
+        }
+      }
+
+      &__icon {
+        font-size: 3.2rem;
+      }
+
+      &__title {
+        letter-spacing: 1px;
+        text-align: center;
+        font-weight: 800;
+        margin-bottom:1rem;
+
+        &_primary {
+          font-size: 2.4rem;
+        }
+
+        &_secondary {
+          font-size: 2rem;
+        }
+      }
+
+      &__calendar {
+        margin-bottom: 2.2rem;
+        align-self: center;
+        border: 1px solid rgba($color-black, 0.1);
+      }
+
+      &__date {
+        font-size: 1.8rem;
+        text-align: center;
+        font-weight: 800;
+        letter-spacing: 2px;
+        color: $primary-color-dark;
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+        padding-bottom: 1rem;
+        margin-bottom: 2.4rem;
+        border-radius: 12px;
+      }
+
+      .radio__container {
+        display: flex;
+        gap: 1.2rem;
+        margin-bottom: 2.4rem;
+   
+      }
+
+      &__button_book {
+        cursor: pointer;
+        border: none;
+        background-color: $primary-color;
+        color: $color-white;
+        padding: 1.2rem;
+        font-size: 1.8rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        border-radius: 12px;
+        transition: $transition-normal;
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+
+        &:hover {
+          transform: translateY(-1rem);
+          box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
+          background-color: $primary-color-dark;
+        }
+      }
+
+      .item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+        border-bottom: 1px solid rgba($color-black, 0.1);
+
+        &__cost_container {
+          display: flex;
+          gap: 2.4rem;
+        }
+
+        &__name {
+          font-size: 1.8rem;
+        }
+
+        &__cost {
+          font-size: 2rem;
+        }
+      }
+
+      &__button_add_service {
+        cursor: pointer;
+        display: flex;
+        gap: 1.2rem;
+        border: none;
+        background-color: $color-white;
+        align-items: center;
+        padding: 1.2rem 2.4rem;
+        margin-bottom: 1.8rem;
+        margin-top: 0rem;
+        border: 1px solid rgba($primary-color, 0);
+        transition: $transition-normal;
+
+        &:hover {
+          border: 1px solid rgba($primary-color, 1);
+        }
+
+        &:active {
+          border: 1px solid rgba($primary-color-dark, 1);
+        }
+
+        &:hover .button_add_service__icon {
+          color: $primary-color;
+          transform: scale(1.2);
+        }
+
+        &:active .button_add_service__icon {
+          color: $primary-color-dark;
+          transform: scale(1.2);
+        }
+
+        &:hover .button_add_service__text {
+          color: $primary-color;
+        }
+
+        &:active .button_add_service__text {
+          color: $primary-color-dark;
+        }
+
+        .button_add_service__icon {
+          font-size: 3.2rem;
+          transition: $transition-normal;
+        }
+
+        .button_add_service__text {
+          font-size: 1.8rem;
+          transition: $transition-normal;
+        }
+      }
+
+      &__cost {
+        font-size: 2.4rem;
+        display: flex;
+        gap: 2.4rem;
+        margin-bottom: 2.4rem;
+
+        &_value {
+          color: $secondary-color-dark;
+          display: block;
+        }
+      }
+    }
+
+    .service {
+      background-color: white;
+      box-shadow: 0 1rem 3rem rgba($color-black, 0.5);
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+
+      &__empty {
+        padding: 2.4rem;
+        font-size: 1.8rem;
+      }
+
+      &__button_close {
+        cursor: pointer;
+        border: none;
+        background-color: white;
+        align-self: flex-end;
+        transition: $transition-normal;
+        border-radius: 12px;
+      }
+
+      &__icon {
+        font-size: 3.2rem;
+        padding: 2.4rem;
+        transition: $transition-normal;
+
+        &:hover {
+          color: $primary-color;
+          transform: scale(1.2);
+        }
+
+        &:active {
+          color: $primary-color-dark;
+        }
+      }
+
+      &__item {
+        cursor: pointer;
+        display: flex;
+        gap: 3.2rem;
+        align-items: center;
+        justify-content: space-between;
+        border: none;
+        border-bottom: 1px solid rgba($color-black, 0.1);
+        background-color: $color-white;
+        transition: $transition-normal;
+        padding: 2.4rem 2.4rem;
+
+        &:hover {
+          background-color: rgba($primary-color-light, 0.2);
+          border-bottom: 1px solid rgba($primary-color-light, 0.1);
+        }
+      }
+
+      &__title {
+        font-size: 1.8rem;
+      }
+
+      &__cost {
+        font-size: 2.4rem;
+        color: $secondary-color-dark;
+      }
+    }
+  }
+}
+.modal__radio {
+  display: none;
+  
+  &:checked + .modal__label {
+    background-color: $primary-color-dark;
+    color: $color-white;
+  }
+}
+.radio__icon {
+  cursor: pointer;
+  font-size: 3.2rem;
+  transition: $transition-normal;
+
+  &:hover {
+    color: $primary-color;
+    transform: scale(1.2);
+  }
+
+  &:active {
+    color: $primary-color-dark;
+  }
+}
+.modal__label {
+  cursor: pointer;
+  transition: $transition-normal;
+  border-radius: 12px;
+  padding: 1rem 2.2rem;
+  background-color: $color-white;
+  box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: 1px solid rgba($primary-color-dark, 0);
+
+  &:hover {
+    border: 1px solid $primary-color-dark;
+  }
+}
+.radio__cont{
+    width:46rem;    
+}
+
+@media only screen and (max-width: 768px) and (min-width:480px) {
+  .overlay {
+  .modal_container {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+
+    .modal{
+      &__button_book{
+        //width: 30rem;
+      }
+    }
+    .service{
+        width:25%;
+        &__cost{
+          font-size:1.5rem;
+          margin-left:0;
+        }
+        &__item{
+          gap:1rem;
+        }
+          &__title{
+              font-size:1.4rem;
+              text-align:left;
+          }
+          
+    }
+}
+  }
+  .modal_service__cost{
+    font-size:1.5rem;
+  }
+}
+
+@media only screen and (max-width: 480px) and (orientation:portrait) {
+  .radio__cont{
+    width:40rem;    
+}
+.modal__label {
+  cursor: pointer;
+  transition: $transition-normal;
+  border-radius: 12px;
+  padding: 1rem 2.2rem;
+  width:10rem;
+  background-color: $color-white;
+  box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: 1px solid rgba($primary-color-dark, 0);
+
+  &:hover {
+    border: 1px solid $primary-color-dark;
+  }
+}
+
+  .overlay {
+    width:100%;
+  .modal_container {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width:90%;
+    //transform: translate(-50%, -50%);
+    overflow-y: initial !important;
+    display: flex;
+    gap: 2.4rem;
+
+      .service{
+        width:30%;
+        &__cost{
+          font-size:1rem;
+          margin-left:0;
+        }
+        &__item{
+          gap:0rem;
+        }
+        &__title{
+              font-size:1rem;
+              text-align:left;
+        } 
+      }
+    .modal {
+     
+      height: 100vh;
+      
+      .radio__container{
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        flex-grow: 1; 
+        .radio__icon {
+          display:none;
+          }
+        }
+    .item{
+
+        &__cost_container {
+          gap: 1rem;}
+        
+    }}}}} 

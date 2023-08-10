@@ -1,0 +1,136 @@
+@import "../abstracts/variables.scss";
+
+.register {
+  background-color: $color-white;
+  width: 30%;
+  margin: 9.6rem auto;
+  padding: 4.8rem;
+  box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 3.2rem;
+  }
+
+  .input__container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 2.4rem;
+  }
+
+  &__error {
+    font-size: 1.8rem;
+    color: $color-error;
+  }
+
+  &__error + .input__container .register__icon {
+    color: $color-error;
+  }
+
+  .input__radio {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.8rem;
+
+    .radio__container {
+      display: flex;
+      gap: 1.2rem;
+    }
+  }
+
+  &__input {
+    font: inherit;
+    font-size: 1.8rem;
+    padding: 1.2rem 4.8rem;
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid $color-grey-dark;
+    transition: $transition-normal;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $primary-color-dark;
+    }
+
+    &:focus + .login__icon {
+      color: $secondary-color-dark;
+    }
+
+    &:hover + .login__icon {
+      transform: scale(0.9);
+    }
+
+    &--error {
+      font: inherit;
+      font-size: 1.8rem;
+      padding: 1.2rem 4.8rem;
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid $color-grey-dark;
+      transition: $transition-normal;
+      border: 2px solid $color-error;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    font-size: 3.2rem;
+    color: $primary-color;
+    margin-left: 1.2rem;
+    transition: $transition-normal;
+  }
+
+  &__button {
+    cursor: pointer;
+    border: none;
+    background-color: $primary-color;
+    padding: 1.2rem 2.4rem;
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 700;
+    border-radius: 12px;
+    transition: $transition-normal;
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    margin-bottom: 2.4rem;
+    line-height: 1.7;
+
+    &:hover {
+      background-color: $primary-color-dark;
+      transform: translateY(-0.5rem);
+      box-shadow: 0 0.5rem 2rem rgba($color-black, 0.2);
+    }
+
+    &--register {
+      margin-top: 2.4rem;
+    }
+
+    &--link {
+      cursor: pointer;
+      border: none;
+      background-color: $secondary-color;
+      padding: 1.2rem 2.4rem;
+      font-size: 1.8rem;
+      color: $color-grey-dark-3;
+      font-weight: 700;
+      border-radius: 12px;
+      transition: $transition-normal;
+      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+      margin-bottom: 1.2rem;
+      text-align: center;
+      text-decoration: none;
+      line-height: 1.7;
+
+      &:hover {
+        background-color: $secondary-color-dark;
+        transform: translateY(-0.5rem);
+        box-shadow: 0 0.5rem 2rem rgba($color-black, 0.2);
+        color: $color-white;
+      }
+    }
+  }
+}

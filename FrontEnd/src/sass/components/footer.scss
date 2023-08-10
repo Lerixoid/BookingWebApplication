@@ -1,0 +1,159 @@
+@import "../abstracts/variables.scss";
+
+.footer {
+  border-top: 1px solid rgba($color-black, 0.1);
+}
+
+.sitemap {
+  display: flex;
+  justify-content: center;
+  gap: 12rem;
+  padding: 3.2rem 0;
+  align-items: center;
+
+  &__categories {
+    display: flex;
+    gap: 6.4rem;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    margin-bottom: 1.8rem;
+    border-bottom: 1px solid rgba($color-black, 0.2);
+    padding-bottom: 0.3rem;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item:link,
+  &__item:visited {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    text-decoration: none;
+    color: $color-grey-dark-3;
+    font-size: 1.4rem;
+  }
+
+  &__item:hover,
+  &__item:active {
+    color: $primary-color-dark;
+  }
+
+  &__link-logo {
+    font-size: 2rem;
+  }
+}
+
+.sitemap__list li:not(:last-child) {
+  margin-bottom: 1.2rem;
+}
+
+.form-subscription {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $primary-color-dark;
+    margin-bottom: 1.2rem;
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__input {
+    font-family: inherit;
+    padding: 1.2rem 2.4rem;
+    border: 1px solid $primary-color;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    font-size: 1.6rem;
+    transition: $transition-normal;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $secondary-color;
+    }
+
+    &:focus + .form-subscription__button {
+      border: 1px solid $primary-color;
+      background-color: $color-white;
+      color: $primary-color;
+
+      &:hover {
+        border: 1px solid $primary-color-dark;
+        color: $primary-color-dark;
+      }
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    border: 1px solid $primary-color;
+    background-color: $primary-color;
+    padding: 1.2rem 2.4rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $color-white;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    transition: $transition-normal;
+    margin-left: -1px;
+
+    &:hover {
+      border: 1px solid $primary-color-dark;
+      background-color: $primary-color-dark;
+    }
+  }
+}
+
+.copyright {
+  background-color: $primary-color-dark;
+  padding: 0.5rem;
+  color: $color-white;
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.4rem;
+}
+#thanks_message{
+  display:none;
+  color:$primary-color-dark;
+}
+
+@media only screen and (max-width: 768px) and (min-width:480px) {
+.footer{
+  
+}
+.sitemap{
+  flex-direction: column;
+  gap:2rem;
+  font-size: 0.9rem;
+
+}
+}
+@media only screen and (max-width: 480px) and (orientation:portrait){
+  .footer{
+  }
+
+  .sitemap{
+    flex-direction: column;
+    gap:2rem;
+    font-size: 0.5rem;  
+     &__categories{
+      gap:4rem;
+     }
+    &__category{
+        
+    }
+    &__item:link,&__item:visited {
+      font-size: 1.2rem;
+    }
+  }
+    
+  }
+  

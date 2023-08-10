@@ -1,0 +1,38 @@
+@import "../abstracts/variables.scss";
+
+.order {
+  display: flex;
+  // justify-content: end;
+  animation-name: moveInTop;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.select {
+  cursor: pointer;
+  padding: 1.2rem 1.8rem;
+  font: inherit;
+  font-size: 1.4rem;
+  border-radius: 12px;
+  border: 2px solid $primary-color;
+  font-weight: 700;
+  outline: none;
+  color: $primary-color-dark;
+  transition: 0.3s;
+
+  &:hover {
+    border: 2px solid $secondary-color;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 480px) {
+  .select {
+    padding: 1rem 1.3rem;
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+  .select {
+    padding: 0;
+    font-size: 1.2rem;
+  }
+}
